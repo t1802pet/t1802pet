@@ -25,7 +25,7 @@ SECRET_KEY = 'mv24_xyu5*=nv+l$*sqn_ilnx3q93*#o-o^3&3an-r*-4%yfxi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
@@ -114,8 +114,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-#LANGUAGE_CODE = 'ko-kr'
+#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
 #TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Seoul'
@@ -131,6 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
@@ -138,3 +139,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_REDIRECT_URL = '/'
+
+
